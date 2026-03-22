@@ -8,9 +8,8 @@ use App\Models\Job;
 
 class JobSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+    use WithoutModelEvents;
+
     public function run(): void
     {
         Job::factory(200)->create();
